@@ -19,24 +19,28 @@ window.onload = function() {
     let pronombre2 = ["el", "un", "las", "los"];
     let objeto = ["libro", "coche", "cuadro", "llaves"];
 
-    let pronombreIndex = Math.floor(Math.random() * pronombre.length);
-    let sustantivoIndex = Math.floor(Math.random() * sustantivo.length);
-    let verboIndex = Math.floor(Math.random() * verbo.length);
-    let pronombre2Index = Math.floor(Math.random() * pronombre2.length);
-    let objetoIndex = Math.floor(Math.random() * objeto.length);
+    let listas = [pronombre, sustantivo, verbo, pronombre2, objeto];
+    //let total = (Math.floor(Math.random() * total.length)([pronombre, sustantivo, verbo, pronombre2, objeto]));
 
-    return (
-      pronombre[pronombreIndex] +
-      " " +
-      sustantivo[sustantivoIndex] +
-      " " +
-      verbo[verboIndex] +
-      " " +
-      pronombre2[pronombre2Index] +
-      " " +
-      objeto[objetoIndex]
-    );
+    for (let lista = 0; lista < listas.length; lista++) {
+      Math.floor(Math.random() * listas);
+      this.console.log(Math.floor(Math.random() * listas));
+      //if (listas == a) {
+      //}
+      //this.console.log("Fail");
+    }
+    return listas;
   };
-  //
-  console.log("Hello Rigo from the console!");
+  /*
+        let pronombreIndex = Math.floor(Math.random() * pronombre.length);
+        let sustantivoIndex = Math.floor(Math.random() * sustantivo.length);
+        let verboIndex = Math.floor(Math.random() * verbo.length);
+        let pronombre2Index = Math.floor(Math.random() * pronombre2.length);
+        let objetoIndex = Math.floor(Math.random() * objeto.length);
+        */
+  /* return (
+            pronombre[pronombreIndex] + " " + sustantivo[sustantivoIndex] + " " + verbo[verboIndex] + " " + pronombre2[pronombre2Index] + " " + objeto[objetoIndex]
+            );
+        */
 };
+//
