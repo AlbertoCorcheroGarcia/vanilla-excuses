@@ -1,9 +1,7 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   document.querySelector("#boton").addEventListener("click", () => {
@@ -18,29 +16,34 @@ window.onload = function() {
     let verbo = ["se comio", "llevó", "pintó", "condujo"];
     let pronombre2 = ["el", "un", "las", "los"];
     let objeto = ["libro", "coche", "cuadro", "llaves"];
-
+    //hago una lista de listas
     let listas = [pronombre, sustantivo, verbo, pronombre2, objeto];
-    //let total = (Math.floor(Math.random() * total.length)([pronombre, sustantivo, verbo, pronombre2, objeto]));
+    // declaro un array vacio para meterle el contenido mas tarde de los resultados de recorrer el array
+    let frase = "";
 
-    for (let lista = 0; lista < listas.length; lista++) {
-      Math.floor(Math.random() * listas);
-      this.console.log(Math.floor(Math.random() * listas));
-      //if (listas == a) {
-      //}
-      //this.console.log("Fail");
+    // hago un bucle para recorrerlo
+    for (let index = 0; index < listas.length; index++) {
+      //accedo a la posicion 0 del array que esta recorriendo dejo el valor en un array
+      let x = listas[index];
+      // saco un numero aleatorio de esa posicion del array y lo dejo en una variable
+      let n = Math.floor(Math.random() * x.length);
+      //cojo la  variable previamente creada con la posicion y el valor obtenido concateno la frase dejandolo en fraseCompleta
+      frase = frase.concat(x[n], " ");
+      //muestro el resultado por consola
+      this.console.log(frase);
     }
-    return listas;
+    return frase;
   };
   /*
-        let pronombreIndex = Math.floor(Math.random() * pronombre.length);
-        let sustantivoIndex = Math.floor(Math.random() * sustantivo.length);
-        let verboIndex = Math.floor(Math.random() * verbo.length);
-        let pronombre2Index = Math.floor(Math.random() * pronombre2.length);
-        let objetoIndex = Math.floor(Math.random() * objeto.length);
-        */
+                  let pronombreIndex = Math.floor(Math.random() * pronombre.length);
+                  let sustantivoIndex = Math.floor(Math.random() * sustantivo.length);
+                  let verboIndex = Math.floor(Math.random() * verbo.length);
+                  let pronombre2Index = Math.floor(Math.random() * pronombre2.length);
+                  let objetoIndex = Math.floor(Math.random() * objeto.length);
+                  */
   /* return (
-            pronombre[pronombreIndex] + " " + sustantivo[sustantivoIndex] + " " + verbo[verboIndex] + " " + pronombre2[pronombre2Index] + " " + objeto[objetoIndex]
-            );
-        */
+                      pronombre[pronombreIndex] + " " + sustantivo[sustantivoIndex] + " " + verbo[verboIndex] + " " + pronombre2[pronombre2Index] + " " + objeto[objetoIndex]
+                    );
+                  */
 };
 //
